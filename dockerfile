@@ -1,3 +1,4 @@
-# grab a conda env populated openmm I found online
-FROM redesignscience/openmm-cuda:latest
-RUN conda init bash
+# grab miniconda from continuum
+FROM continuumio/miniconda3
+WORKDIR /app
+RUN conda install -c conda-forge openmm
